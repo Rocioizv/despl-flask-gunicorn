@@ -24,6 +24,25 @@ Ya fuera de nuestro entorno virtual, crearemos un archivo para que systemd corra
 Creamos el archivo rconcan.conf en /etc/nginx/sites-available como en este ejemplo.
 <a href="conf-despliegue/rconcan.conf">Archivo rconcan.conf</a>
 
-Finalmente accedemos a la app mediante la url
+Finalmente accedemos a la app mediante el dominio
 <img src="conf-despliegue/img/rconcan-izv.png">
 
+
+## Segundo ejemplo
+Siguiendo los mismos pasos que en el ejemplo anterior creamos el entorno virtual de app2
+<img src="conf-despliegue/img/entornoVirtual2.png">
+
+Modificamos el archivo a <a href="conf-despliegue/application2.py">application2.py </a> para despegar la app. El archivo <a href="conf-despliegue/wsgi.py">wsgi.py</a> se mantiene igual.
+
+Despliegue con Flask
+<img src="conf-despliegue/img/flask2.png">
+
+Despliegue con Gunicorn
+<img src="conf-despliegue/img/gunicorn2.png">
+
+Creamos el archivo para el servicio: <a href="conf-despliegue/app2.service">app2.service</a>
+
+Luego el archivo <a href="conf-despliegue/app2.conf">app2.conf</a> para luego crear el enlace simbólico con "sudo ln -s /etc/nginx/sites-available/app2.conf /etc/nginx/sites-enabled/"
+
+Finalmente podemos acceder a la aplicación con el dominio
+<img src="conf-despliegue/img/app2-izv.png">

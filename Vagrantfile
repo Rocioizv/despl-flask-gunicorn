@@ -31,3 +31,7 @@ Vagrant.configure("2") do |config|
 
 end
 #/home/vagrant/.local/share/virtualenvs/rconcan-mweWztWZ/bin/gunicorn
+# /home/vagrant/.local/share/virtualenvs/msdocs-python-flask-webapp-quickstart-YrxIX3KC/bin/gunicorn
+# gunicorn --workers 4 --bind 0.0.0.0:5000 wsgi:app
+
+#/home/vagrant/.local/share/virtualenvs/app2-8dqDLCtH/bin/gunicorn

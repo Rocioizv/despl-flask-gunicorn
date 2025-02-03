@@ -1,3 +1,4 @@
+
 from flask import Flask, render_template, request
 
 app = Flask(__name__)
@@ -9,6 +10,6 @@ def index():
 
 @app.route('/hello', methods=['POST'])
 def hello():
-    '''Procesa el formulario y muestra la página hello.html'''
-    name = request.form.get('name', 'Anónimo')
+    '''hello.html page route'''
+    name = request.form.get('name')
     return render_template('hello.html', name=name)
